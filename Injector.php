@@ -10,6 +10,20 @@
  * @license    http://www.opensource.org/licenses/mit-license.php MIT
  *
  */
+trait BaseInjector
+{
+	public static function prepare($name=null,$instance){
+		if(!isset($name)){
+			$name = uniqid();
+		}
+		$keyName = __TRAIT__ . $name;
+		if(!Container::exists($keyName))
+		{
+			Container::set($keyName, $instance); 
+		}
+		return Container::get($keyName);
+	}
+}
 trait ViewInjector
 {
 	/**
@@ -18,15 +32,7 @@ trait ViewInjector
 	 */
 	public function getView($name=null)
 	{
-		if(!isset($name)){
-			$name = uniqid();
-		}
-		$keyName = __TRAIT__ . $name;
-		if(!Container::exists($keyName))
-		{
-			Container::set($keyName, new View()); 
-		}
-		return Container::get($keyName);
+		return BaseInjector::prepare($name, new View());
 	}
 }
 trait NavigationInjector 
@@ -37,15 +43,7 @@ trait NavigationInjector
 	 */
 	public function getNavigation($name=null)
 	{
-		if(!isset($name)){
-			$name = uniqid();
-		}
-		$keyName = __TRAIT__ . $name;
-		if(!Container::exists($keyName))
-		{
-			Container::set($keyName, new Navigation()); 
-		}
-		return Container::get($keyName);
+		return BaseInjector::prepare($name, new Navigation());
 	}
 }
 trait ContentInjector 
@@ -56,30 +54,14 @@ trait ContentInjector
 	 */
 	public function getContent($name=null)
 	{
-		if(!isset($name)){
-			$name = uniqid();
-		}
-		$keyName = __TRAIT__ . $name;
-		if(!Container::exists($keyName))
-		{
-			Container::set($keyName, new Content($name)); 
-		}
-		return Container::get($keyName);
+		return BaseInjector::prepare($name, new Content($name));
 	}
 }
 trait UserModelInjector
 {
 	public function getUserModel($name=null)
 	{
-		if(!isset($name)){
-			$name = uniqid();
-		}
-		$keyName = __TRAIT__ . $name;
-		if(!Container::exists($keyName))
-		{
-			Container::set($keyName, new UserModel()); 
-		}
-		return Container::get($keyName);
+		return BaseInjector::prepare($name, new UserModel());
 	}
 }
 
