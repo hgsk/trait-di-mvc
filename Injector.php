@@ -32,7 +32,7 @@ trait ViewInjector
 	 */
 	public function getView($name=null)
 	{
-		return BaseInjector::prepare($name, new View());
+		return BaseInjector::prepare($name, new View);
 	}
 }
 trait NavigationInjector 
@@ -43,7 +43,7 @@ trait NavigationInjector
 	 */
 	public function getNavigation($name=null)
 	{
-		return BaseInjector::prepare($name, new Navigation());
+		return BaseInjector::prepare($name, new Navigation);
 	}
 }
 trait ContentInjector 
@@ -61,7 +61,7 @@ trait UserModelInjector
 {
 	public function getUserModel($name=null)
 	{
-		return BaseInjector::prepare($name, new UserModel());
+		return BaseInjector::prepare($name, new UserModel);
 	}
 }
 

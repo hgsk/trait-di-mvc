@@ -48,5 +48,5 @@ class PageController {
 	}
 }
 
-$page = new PageController();
+$page = new PageController;
 $page->show();
