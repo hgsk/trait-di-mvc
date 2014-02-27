@@ -65,3 +65,15 @@ trait UserModelInjector
 	}
 }
 
+trait ControllerInjector
+{
+	public function getController($name=null)
+	{
+		$classname = camelize($name) . 'Controller';
+		return BaseInjector::prepare($name, new $classname);
+	}
+}
+
+function camelize($str){
+	return str_replace(' ','',ucwords(str_replace('_',' ',$str)));
+}

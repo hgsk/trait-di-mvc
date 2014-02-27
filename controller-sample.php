@@ -48,5 +48,12 @@ class PageController {
 	}
 }
 
-$page = new PageController;
-$page->show();
+class Application {
+	use ControllerInjector;
+	public function run(){
+		$this->getController('page')->show();
+	}
+}
+
+$app = new Application;
+$app->run();
