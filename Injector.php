@@ -57,11 +57,12 @@ trait ContentInjector
 		return BaseInjector::prepare($name, new Content($name));
 	}
 }
-trait UserModelInjector
+trait ModelInjector
 {
-	public function getUserModel($name=null)
+	public function getModel($name=null)
 	{
-		return BaseInjector::prepare($name, new UserModel);
+		$classname = camelize($name);
+		return BaseInjector::prepare($name, new $classname);
 	}
 }
 

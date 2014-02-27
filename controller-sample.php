@@ -7,7 +7,7 @@ class View {
 	}
 }
 
-class  UserModel{
+class User{
 	public function get(){
 		return [
 			(object)['name'=>'John','password'=>'foo'],
@@ -25,13 +25,13 @@ class Navigation{
 
 class Content{
 	use ViewInjector;
-	use UserModelInjector;
+	use ModelInjector;
 	private $title;
 	public function __construct($title){
 		$this->title = $title;
 	}
 	public function show(){
-		$users = $this->getUserModel()->get();
+		$users = $this->getModel('user')->get();
 		$this->getView()->show($this->title);
 		foreach($users as $user){
 			$this->getView()->show($user->name);
