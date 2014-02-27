@@ -9,7 +9,7 @@ Feature
 - traitでDIの設定を記述します
 - Mockしやすい構造を目指します
 - Web APIに特化します
-- 
+
 TODO
 ----
 
