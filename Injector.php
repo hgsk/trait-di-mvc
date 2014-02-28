@@ -56,11 +56,11 @@ trait ContentInjector
 		return BaseInjector::prepare($name, new Content($name));
 	}
 }
-trait ModelInjector
+trait DataMapperInjector 
 {
-	public function getModel($name=null)
+	public function getDataMapper($name=null)
 	{
-		$classname = camelize($name);
+		$classname = camelize($name) . 'Mapper';
 		return BaseInjector::prepare($name, new $classname);
 	}
 }

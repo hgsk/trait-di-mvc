@@ -45,10 +45,19 @@ class View {
 // TODO 各ビジネスモデルはModelを継承するようにする
 // TODO Modelはgetter,setter,validationのみを提供する
 class User{
-	public function get(){
+	public $name;
+	public $password;
+	public function __construct($name,$password){
+		$this->name = $name;
+		$this->password = $password;
+		return true;
+	}
+}
+class UserMapper{
+	public function all(){
 		return [
-			(object)['name'=>'John','password'=>'foo'],
-			(object)['name'=>'Mark','password'=>'bar']
+			new User('John','foo'),
+			new User('Mark','bar'),
 		];
 	}
 }
@@ -64,7 +73,7 @@ class User{
 class Navigation{
 	use ViewInjector;
 	public function show(){
-		$this->getView()->show('li*3');
+		$this->getView()->set('nav','li*3');
 	}
 }
 
@@ -72,14 +81,14 @@ class Navigation{
 // TODO Context内でModelにRoleを与えて処理する -> Model内で動的にtraitをuseできるようにしたい $user->use('role')->roleInteraction() <-むりっぽい
 class Content{
 	use ViewInjector;
-	use ModelInjector;
+	use DataMapperInjector;
 	private $title;
 	public function __construct($title){
 		$this->title = $title;
 	}
 	public function show(){
 	//	$users = UserMapper::find(1);
-		$users = $this->getModel('user')->all();
+		$users = $this->getDataMapper('user')->all();
 		$this->getView()->set('title',$this->title);
 		$this->getView()->set('users',$users)->render();
 	}
@@ -87,10 +96,13 @@ class Content{
 
 // TODO 抽象クラス BaseControllerに共通処理と、個別処理のインターフェースを書く
 class PageController {
+	use DataMapperInjector;
 	use ViewInjector;
 	public function show(){
 		//$this->getView('view.html')->set('foo','bar')->set('hoge','fuga')->render();
+		$users = $this->getDataMapper('user')->all();
 		$view = $this->getView('view.html');
+		$view->set('users',$users);
 		$view->set('foo','bar');
 		$view->set('hoge','fuga');
 		$view->render();

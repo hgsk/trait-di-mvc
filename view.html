@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<ul>
+<?php foreach($users as $user):?>
+		<li>name: <?php echo $user->name ?></li>
+		<li>password: <?php echo $user->password ?></li>
+<?php endforeach;?>
+	</ul>
+<?php echo $hoge?>
+<?php echo $foo?>
+</body>
+</html>
