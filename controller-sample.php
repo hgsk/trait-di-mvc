@@ -2,7 +2,9 @@
 require 'Container.php';
 require 'Injector.php';
 
-// setでテンプレート変数を渡す
+/**
+ * View
+ */
 class View {
 	public $variables = [];
 	public $content;
@@ -42,6 +44,9 @@ class View {
 	}
 }
 
+/**
+ * User Model
+ */
 // TODO 各ビジネスモデルはModelを継承するようにする
 // TODO Modelはgetter,setter,validationのみを提供する
 class User{
@@ -53,6 +58,16 @@ class User{
 		return true;
 	}
 }
+
+/**
+ * User DataMapper
+ */
+// TODO 永続化機構をBaseDataMapperクラスに実装する
+// TODO 複数のDataMapperにまたがるトランザクションを実装できるようにする -> Contextに実装？
+// http://www.sitepoint.com/forums/showthread.php?593227-DataMapper-Pattern-and-Transactions
+// For the first method, you could handle transactions inside each mapper.
+// Each mapper checks if a transaction is already started, and if not, starts one itself.
+// If a transaction is already started, then it just goes about its business. 
 class UserMapper{
 	public function all(){
 		return [
@@ -61,12 +76,6 @@ class UserMapper{
 		];
 	}
 }
-// TODO DataMapperを定義する
-// TODO 複数のDataMapperにまたがるトランザクションを実装できるようにする
-// http://www.sitepoint.com/forums/showthread.php?593227-DataMapper-Pattern-and-Transactions
-// For the first method, you could handle transactions inside each mapper.
-// Each mapper checks if a transaction is already started, and if not, starts one itself.
-// If a transaction is already started, then it just goes about its business. 
 
 // TODO Decoratorに変更して、View用のModel処理を記述する cf:Draper
 // viewで、$user->getName()
@@ -95,6 +104,9 @@ class Content{
 }
 
 // TODO 抽象クラス BaseControllerに共通処理と、個別処理のインターフェースを書く
+/**
+ * Page Controller
+ */
 class PageController {
 	use DataMapperInjector;
 	use ViewInjector;
@@ -109,6 +121,9 @@ class PageController {
 	}
 }
 
+/**
+ * Application
+ */
 class Application {
 	use ControllerInjector;
 	public function run(){
@@ -116,7 +131,7 @@ class Application {
 	}
 }
 
-
+//////////Entry Point//////////
 $app = new Application;
 $app->run();
 
@@ -129,6 +144,8 @@ class Test{
 		//echo camelize('hogE')=='Hoge' ? 'passed' : 'failed';
 	}
 }
+
+////////Debug Utility////////
 function v($variable){
 	var_dump($variable);
 	return true;
