@@ -2,8 +2,6 @@
 /**
  * Injector trait (DI)
  *
- * Singletonのインスタンスを返します
- * 
  * PHP Version 5.5
  * 
  * @author     hgsk
@@ -31,9 +29,9 @@ trait ViewInjector
 	 * @param string $configName
 	 * @return \Lib\JsonConfig
 	 */
-	public function getView($name=null)
+	public function getView($filename=null)
 	{
-		return BaseInjector::prepare($name, new View);
+		return BaseInjector::prepare($filename, new View($filename));
 	}
 }
 trait NavigationInjector 

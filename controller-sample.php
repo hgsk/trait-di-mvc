@@ -47,21 +47,21 @@ class Content{
 	}
 	public function show(){
 	//	$users = UserMapper::find(1);
-		$users = $this->getModel('user')->get();
-		$this->getView()->show($this->title);
-		foreach($users as $user){
-			$this->getView()->show($user->name);
-		}
+		$users = $this->getModel('user')->all();
+		$this->getView()->set('title',$this->title);
+		$this->getView()->set('users',$users)->render();
 	}
 }
 
 // TODO 抽象クラス BaseControllerに共通処理と、個別処理のインターフェースを書く
 class PageController {
-	use NavigationInjector;
-	use ContentInjector;
+	use ViewInjector;
 	public function show(){
-		$this->getNavigation()->show();
-		$this->getContent('title!')->show();
+		//$this->getView('view.html')->set('foo','bar')->set('hoge','fuga')->render();
+		$view = $this->getView('view.html');
+		$view->set('foo','bar');
+		$view->set('hoge','fuga');
+		$view->render();
 	}
 }
 
@@ -84,4 +84,8 @@ class Test{
 		//echo camelize('hoGe')=='Hoge' ? 'passed' : 'failed';
 		//echo camelize('hogE')=='Hoge' ? 'passed' : 'failed';
 	}
+}
+function v($variable){
+	var_dump($variable);
+	return true;
 }
