@@ -2,11 +2,43 @@
 require 'Container.php';
 require 'Injector.php';
 
-// TODO static makeでテンプレートを呼び出す
-// TODO none-static setでテンプレート変数を渡す
+// setでテンプレート変数を渡す
 class View {
-	public function show($str){
-		echo "<p>$str</p>";
+	public $variables = [];
+	public $content;
+
+	/**
+	 * テンプレートを呼び出す
+	 * @param string $filename View template filename
+	 * @return bool
+	 */
+	public function __construct($filename){
+		$this->filename = $filename;
+		return true;
+	}
+
+	/**
+	 * コンテンツを出力する
+	 * @return bool
+	 */
+	public function render(){
+		ob_start();
+		extract($this->variables);
+		include $this->filename;
+		$this->content = ob_get_clean();
+		echo $this->content;
+		return true;
+	}
+
+	/**
+	 * テンプレート変数を格納する
+	 * @param string $key variable key
+	 * @param string $value variable value
+	 * @return object $this
+	 */
+	public function set($name,$value){
+		$this->variables[$name] = $value;
+		return $this;
 	}
 }
 
