@@ -66,19 +66,6 @@ trait ContentInjector
 	}
 }
 
-trait DataMapperInjector 
-{
-	/**
-	 * @param string $name
-	 * @return DataMapper
-	 */
-	public function getDataMapper($name=null)
-	{
-		$classname = camelize($name) . 'Mapper';
-		return BaseInjector::prepare($name, new $classname);
-	}
-}
-
 trait ControllerInjector
 {
 	/**
