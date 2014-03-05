@@ -5,13 +5,23 @@
 	<title></title>
 </head>
 <body>
-	<ul>
-<?php foreach($users as $user):?>
-		<li>name: <?php echo $user->name ?></li>
-		<li>password: <?php echo $user->password ?></li>
-<?php endforeach;?>
-	</ul>
-<?php echo $hoge?>
-<?php echo $foo?>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Password</th>
+		<th>Create Date</th>
+		<th>Update Date</th>
+	</tr>
+	<?php foreach($users as $user):?>
+	<tr>
+		<td><?php echo $user->name ?></td>
+		<td><?php echo $user->password ?></td>
+		<td><?php echo $user->create_dt ?></td>
+		<td><?php echo $user->update_dt ?></td>
+	</tr>
+	<?php endforeach;?>
+</table>
+$hoge: <?php echo $hoge?></br>
+$foo: <?php echo $foo?>
 </body>
 </html>

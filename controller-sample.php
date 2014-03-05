@@ -29,6 +29,9 @@ class View {
 		include $this->filename;
 		$this->content = ob_get_clean();
 		echo $this->content;
+		//JsonVIEW
+		//header('Content-type: application/json');
+		//echo json_encode($this->variables, JSON_PRETTY_PRINT);
 		return true;
 	}
 
@@ -48,10 +51,14 @@ class View {
  * User Model
  */
 // TODO 各ビジネスモデルはModelを継承するようにする
-// TODO Modelはgetter,setter,validationのみを提供する
+// TODO Modelは__get,__set,validationのみを提供する
 class User{
+	// TODO カラム名とプロパティ名あわせないといけない問題を解消する
+	public $id;
 	public $name;
 	public $password;
+	public $create_dt;
+	public $update_dt;
 }
 
 /**
@@ -63,79 +70,94 @@ class User{
 // For the first method, you could handle transactions inside each mapper.
 // Each mapper checks if a transaction is already started, and if not, starts one itself.
 // If a transaction is already started, then it just goes about its business. 
+// DBALのnestedTransactionを利用できるかも
 require 'vendor/autoload.php';
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
+use Doctrine\DBAL\Connection;
 class UserMapper extends DataMapper{
 	const MODEL_CLASS = 'User';
-	static public function insert($data){
-		$modelClass = self::MODEL_CLASS;
+
+	// PDO/DBALに依存している。(SQL直書きなので)
+	// TODO MongoやRedisにも対応できるようにする
+
+	/**
+	 * 新しい行を追加する
+	 * @param Model $model;
+	 * @return int ;
+	 **/
+	static public function create($model){
 		$statement = self::getConnection()->prepare('
-			INSERT INTO user_tbl(name, password)
-			VALUES (?,?,?,?)
+			INSERT INTO user_tbl(name, password, create_dt, update_dt)
+			VALUES (:name,:password, :create_dt, :update_dt) 
 		');
-		$statement->bindParam(1,$name, PDO::PARAM_STR);
-		$statement->bindParam(1,$password, PDO::PARAM_STR);
-		if(! is_array($data)){
-			$data = array($data);
-		}
-		foreach($data as $row){
-			if(! $row instanceof $modelClass || ! $row->isValid()){
-				throw new InvalidArgumentException;
-			}
-			$name = $row->name;
-			$password = $row->password;
-			$statement->execute();
-			$row->id = self::getConnection()->lastInsertId();
-		}
+		$dt = self::getDateTime();
+		$statement->bindParam("name", $model->name, PDO::PARAM_STR);
+		$statement->bindParam("password", $model->password, PDO::PARAM_STR);
+		$statement->bindParam("create_dt", $dt, PDO::PARAM_STR);
+		$statement->bindParam("update_dt", $dt, PDO::PARAM_STR);
+		$statement->execute();
+		$model->id = self::getConnection()->lastInsertId();
+		return $model->id;
 	}
 
-	static public function update($data)
+	/**
+	 * 指定した行を更新する
+	 * @param Model $model;
+	 * @return Model;
+	 **/
+	static public function update($model)
 	{
-		$modelClass = self::MODEL_CLASS;
+		//TODO 指定した行だけUPDATEするようにする
+		//TODO 指定したプロパティだけUPDATEするようにする
 		$statement = self::getConnection()->prepare('
 			UPDATE user_tbl 
-			SET name = ?
-			,	password = ?
-			WHERE id = ?
+			SET name = :name
+			,	password = :password
+			WHERE id = :id
 		');
-		$statement->bindParam(1,$name, PDO::PARAM_STR);
-		$statement->bindParam(1,$password, PDO::PARAM_STR);
+		$statement->bindValue("name", $model->name, PDO::PARAM_STR);
+		$statement->bindValue("password" ,$model->password, PDO::PARAM_STR);
+		$statement->bindValue("id" ,$model->id, PDO::PARAM_INT);
 		$statement->execute();
 	}
 
-	static public function delete($data){
-		$modelClass = self::MODEL_CLASS;
-		$statement = self::getConnection()->prepare('
+	/**
+	 * 指定したIDの行をDBから削除する
+	 * @param int $id;
+	 * @return Model;
+	 **/
+	static public function destroy($ids){
+		$sql = '
 			DELETE FROM user_tbl 
-			WHERE id = ?
-		');
-		$stamtement->bindParam(1, $id, PDO::PARAM_INT);
-		if(! is_array($data)){
-			$data = [$data];
-		};
-		foreach($data as $row){
-			if(! $row instanceof $modelClass){
-				throw new InvalidArgumentException;
-			}
-			$id = $row->id;
-			$statement = execute();
-		}
+			WHERE id in (?)
+		';
+		$statement = self::getConnection()->executeQuery($sql, [$ids], [Connection::PARAM_INT_ARRAY]);
+		return $statement->execute();
 	}
 
-	function find($id){
+	/**
+	 * 指定したIDの行を返す
+	 * @param int $id;
+	 * @return Model;
+	 **/
+	static public function find($id){
 		$statement = self::getConnection()->prepare('
 			SELECT *
 			FROM user_tbl
-			WHERE id = ?
+			WHERE id = :id
 		');
-		$statement->bindParam(1, $id, PDO::OARAM_INT);
+		$statement->bindValue("id", $id, PDO::PARAM_INT);
 		$statement->execute();
 
-		self::decorate($statement);
-		return $statement->fetch();
+		return self::decorate($statement)->fetch();
 	}
 
+	/**
+	 * すべての行を返す
+	 * @param int $id;
+	 * @return Model $model;
+	 **/
 	static public function all(){
 		$statement = self::getConnection()->query('
 			SELECT *
@@ -166,10 +188,14 @@ abstract class DataMapper
 		return self::$connection;
 	}
 
-	static protected function decorate(PDOStatement $statement)
+	static protected function decorate($statement)
 	{
 		$statement->setFetchMode(PDO::FETCH_CLASS, static::MODEL_CLASS);
 		return $statement;
+	}
+	static protected function getDateTime(){
+		$dt= new DateTime();
+		return $dt->format('c');
 	}
 }
 
@@ -186,7 +212,6 @@ class Navigation{
 // TODO Context内でModelにRoleを与えて処理する -> Model内で動的にtraitをuseできるようにしたい $user->use('role')->roleInteraction() <-むりっぽい
 class Content{
 	use ViewInjector;
-	//use DataMapperInjector;
 	private $title;
 	public function __construct($title){
 		$this->title = $title;
@@ -204,16 +229,41 @@ class Content{
  * Page Controller
  */
 class PageController {
-	//use DataMapperInjector;
 	use ViewInjector;
-	public function show(){
-		//$this->getView('view.html')->set('foo','bar')->set('hoge','fuga')->render();
+	public function show($params){
+		//Cookieをセット
+		setcookie("cookie","eaten");
+		//
+		//print_r($_COOKIE);
+		//print_r($_GET);
+		//print_r($_POST);
+
+		//新規ユーザーを登録
+		$user = new User();
+		$user->name = "Jane";
+		$user->password = "hoge";
+		$new_user_id = UserMapper::create($user);
+
+		//新規ユーザーを修正
+		$user = UserMapper::find($new_user_id);
+		$user->name = "Sato";
+		$user->password = "hoge";
+		UserMapper::update($user);
+
+		//すべてのユーザーを取得
 		$users = UserMapper::all();
-		$view = $this->getView('view.html');
-		$view->set('users',$users);
-		$view->set('foo','bar');
-		$view->set('hoge','fuga');
-		$view->render();
+		$user_ids = array_map(function ($user){return $user->id;},$users);
+
+		//すべてのユーザーを削除
+		UserMapper::destroy($user_ids);
+
+		// Viewを出力
+		$this->getView('view.html')->set('users',$users)->set('foo','bar')->set('hoge','fuga')->render();
+		//$view = $this->getView('view.html');
+		//$view->set('users',$users);
+		//$view->set('foo','bar');
+		//$view->set('hoge','fuga');
+		//$view->render();
 	}
 }
 
@@ -223,12 +273,15 @@ class PageController {
 class Application {
 	use ControllerInjector;
 	public function run(){
-		$this->getController('page')->show();
+		// /Controller/Action/param1/value1/param2/value2/...
+		$requestURI = explode('/', $_SERVER['REQUEST_URI']);
+		$this->getController($requestURI[1])->$requestURI[2](array_slice($requestURI,3));
 	}
 }
 
 //////////Entry Point//////////
 $app = new Application;
+date_default_timezone_set('Asia/Tokyo');
 $app->run();
 
 //////////Test//////////
