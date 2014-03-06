@@ -6,5 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'MY_Config' => $baseDir . '/src/config/config.php',
+    'AppConfig' => $baseDir . '/src/config/config.php',
+    'Confirmable' => $baseDir . '/lib/util/Traits.php',
+    'DBConfig' => $baseDir . '/src/config/config.php',
+    'Lockable' => $baseDir . '/lib/util/Traits.php',
+    'Logger' => $baseDir . '/lib/util/Logger.php',
+    'Registrable' => $baseDir . '/lib/util/Traits.php',
+    'TwitterConfig' => $baseDir . '/src/config/config.php',
+    'YahooConfig' => $baseDir . '/src/config/config.php',
 );

@@ -4,7 +4,7 @@
 			"": "src/app",
 			"framework": "src/framework"
 		},
-        "classmap": ["src/config"],
-        "files": ["lib/utility/utility.php"]
+        "classmap": ["src/config","lib/util"],
+        "files": ["lib/util/debug.php"]
     }
 }

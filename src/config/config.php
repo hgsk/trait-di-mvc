@@ -1,3 +1,5 @@
 <?php
-class MY_Config{
-}
+class DBConfig{}
+class AppConfig{}
+class YahooConfig{}
+class TwitterConfig{}
