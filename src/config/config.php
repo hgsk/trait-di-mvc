@@ -1,3 +1,3 @@
 <?php
-array(
-);
+class MY_Config{
+}
