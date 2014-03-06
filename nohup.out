@@ -1,0 +1,411 @@
+PHP 5.5.9 Development Server started at Wed Mar  5 12:54:58 2014
+Listening on http://localhost:8011
+Document root is /Users/hagiharar/Documents/php/DI/trait-di-mvc
+Press Ctrl-C to quit.
+[Wed Mar  5 12:55:23 2014] PHP Fatal error:  Class 'Controller' not found in /Users/hagiharar/Documents/php/DI/trait-di-mvc/Injector.php on line 78
+[Wed Mar  5 12:55:23 2014] ::1:52263 [200]: /page - Class 'Controller' not found in /Users/hagiharar/Documents/php/DI/trait-di-mvc/Injector.php on line 78
+[Wed Mar  5 12:55:39 2014] ::1:52264 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:55:59 2014] ::1:52383 [200]: /page
+[Wed Mar  5 12:56:19 2014] ::1:52384 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:56:21 2014] ::1:52454 [200]: /page
+[Wed Mar  5 12:56:23 2014] ::1:52455 [200]: /page
+[Wed Mar  5 12:56:39 2014] ::1:52462 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:56:55 2014] ::1:52572 [200]: /page
+[Wed Mar  5 12:57:03 2014] ::1:52573 [200]: /page
+[Wed Mar  5 12:57:19 2014] ::1:52596 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:57:28 2014] ::1:52678 [200]: /page
+[Wed Mar  5 12:57:39 2014] ::1:52679 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:57:53 2014] ::1:52758 [200]: /page/show
+[Wed Mar  5 12:58:09 2014] ::1:52759 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:59:00 2014] ::1:52975 [200]: /page/show
+[Wed Mar  5 12:59:19 2014] ::1:52976 Invalid request (Unexpected EOF)
+[Wed Mar  5 12:59:51 2014] ::1:53135 [200]: /page/show
+[Wed Mar  5 13:00:01 2014] ::1:53136 Invalid request (Unexpected EOF)
+[Wed Mar  5 13:00:04 2014] ::1:53186 [200]: /page/show
+[Wed Mar  5 13:01:20 2014] ::1:53454 [200]: /page/show/fuga/hoge/view/1/2/3
+[Wed Mar  5 13:01:31 2014] ::1:53455 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 13:01:49 2014] ::1:53490 Invalid request (Unexpected EOF)
+[Wed Mar  5 14:25:29 2014] ::1:53054 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 14:25:41 2014] ::1:53055 Invalid request (Unexpected EOF)
+[Wed Mar  5 14:26:07 2014] ::1:53222 [200]: /page/show
+[Wed Mar  5 14:26:35 2014] ::1:53307 [200]: /page/show
+[Wed Mar  5 14:27:00 2014] ::1:53381 [200]: /page/show
+[Wed Mar  5 14:27:12 2014] ::1:53419 [200]: /page/show
+[Wed Mar  5 14:27:28 2014] ::1:53469 [200]: /page/show
+[Wed Mar  5 14:28:19 2014] ::1:53627 [200]: /page/show
+[Wed Mar  5 14:28:30 2014] ::1:53658 [200]: /page/show
+[Wed Mar  5 14:30:42 2014] ::1:54074 [200]: /page/show
+[Wed Mar  5 14:30:51 2014] ::1:54102 [200]: /page/show
+[Wed Mar  5 14:32:01 2014] ::1:54357 [200]: /page/show
+[Wed Mar  5 14:32:30 2014] ::1:54452 [200]: /page/show
+[Wed Mar  5 14:32:41 2014] ::1:54486 [200]: /page/show
+[Wed Mar  5 14:32:53 2014] ::1:54522 [200]: /page/show
+[Wed Mar  5 14:33:23 2014] ::1:54616 [200]: /page/show
+[Wed Mar  5 14:33:33 2014] ::1:54647 [200]: /page/show
+[Wed Mar  5 14:35:28 2014] ::1:55000 [200]: /page/show
+[Wed Mar  5 14:35:39 2014] ::1:55032 [200]: /page/show
+[Wed Mar  5 14:35:52 2014] ::1:55074 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 14:35:53 2014] ::1:55075 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 14:36:12 2014] ::1:55082 Invalid request (Unexpected EOF)
+[Wed Mar  5 14:36:20 2014] ::1:55172 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 14:36:30 2014] ::1:55173 Invalid request (Unexpected EOF)
+[Wed Mar  5 14:45:38 2014] ::1:56923 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 14:45:58 2014] ::1:56924 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:15:27 2014] PHP Warning:  array_map() expects at least 2 parameters, 1 given in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 236
+[Wed Mar  5 15:15:27 2014] PHP Fatal error:  Call to undefined method UserMapper::delete() in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 237
+[Wed Mar  5 15:15:27 2014] ::1:62714 [200]: /page/show/fuga/1/hoge/2 - Call to undefined method UserMapper::delete() in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 237
+[Wed Mar  5 15:15:37 2014] ::1:62715 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:15:42 2014] PHP Fatal error:  Call to undefined method UserMapper::delete() in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 237
+[Wed Mar  5 15:15:42 2014] ::1:62763 [200]: /page/show/fuga/1/hoge/2 - Call to undefined method UserMapper::delete() in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 237
+[Wed Mar  5 15:15:50 2014] PHP Fatal error:  Undefined class constant 'PARAM_INT_ARRAY' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 126
+[Wed Mar  5 15:15:50 2014] ::1:62764 [200]: /page/show/fuga/1/hoge/2 - Undefined class constant 'PARAM_INT_ARRAY' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 126
+[Wed Mar  5 15:16:02 2014] ::1:62794 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:17:02 2014] PHP Fatal error:  Class 'Connection' not found in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 126
+[Wed Mar  5 15:17:02 2014] ::1:63017 [200]: /page/show/fuga/1/hoge/2 - Class 'Connection' not found in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 126
+[Wed Mar  5 15:17:12 2014] ::1:63018 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:17:25 2014] PHP Notice:  Array to string conversion in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 165
+[Wed Mar  5 15:17:25 2014] ::1:63096 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:17:35 2014] ::1:63097 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:21:53 2014] PHP Notice:  Undefined variable: statement in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 127
+[Wed Mar  5 15:21:53 2014] PHP Fatal error:  Call to a member function executeQuery() on a non-object in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 127
+[Wed Mar  5 15:21:53 2014] ::1:63965 [200]: /page/show/fuga/1/hoge/2 - Call to a member function executeQuery() on a non-object in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 127
+[Wed Mar  5 15:22:03 2014] ::1:63966 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:39:21 2014] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 127
+[Wed Mar  5 15:39:21 2014] ::1:50909 [200]: /page/show/fuga/1/hoge/2 - syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 127
+[Wed Mar  5 15:39:31 2014] ::1:50910 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:39:44 2014] PHP Notice:  Array to string conversion in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php on line 696
+[Wed Mar  5 15:39:44 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(127): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(238): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(257): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(263): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:39:44 2014] ::1:50981 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(127): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(238): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(257): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(263): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:39:54 2014] ::1:50982 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:39:57 2014] PHP Notice:  Array to string conversion in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php on line 696
+[Wed Mar  5 15:39:57 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(128): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(239): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(258): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(264): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:39:57 2014] ::1:51026 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(128): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(239): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(258): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(264): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:40:07 2014] ::1:51027 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:40:40 2014] PHP Notice:  Array to string conversion in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php on line 696
+[Wed Mar  5 15:40:40 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(127): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(238): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(257): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(263): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:40:40 2014] ::1:51159 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(127): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(238): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(257): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(263): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:40:41 2014] PHP Notice:  Array to string conversion in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php on line 696
+[Wed Mar  5 15:40:41 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(127): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(238): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(257): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(263): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:40:41 2014] ::1:51160 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 25 bind or column index out of range' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:696
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(696): PDOStatement->execute(Array)
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(127): Doctrine\DBAL\Connection->executeQuery('????DELETE FROM...', Array)
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(238): UserMapper::destroy(Array)
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(257): PageController->show(Array)
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(263): Application->run()
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php(2): require('/Users/hagihara...')
+#6 {main}
+
+Next exception 'Doctrine\DBAL\DBALException' with message 'An exception occurred while  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 15:41:00 2014] ::1:51164 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:41:57 2014] ::1:51397 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:42:01 2014] ::1:51398 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:42:02 2014] ::1:51411 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:42:02 2014] ::1:51415 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:42:03 2014] ::1:51417 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:42:03 2014] ::1:51420 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:42:17 2014] ::1:51422 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:46:51 2014] ::1:52305 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:47:01 2014] ::1:52306 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:47:38 2014] ::1:52449 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:47:48 2014] ::1:52450 Invalid request (Unexpected EOF)
+[Wed Mar  5 15:52:49 2014] ::1:53606 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 15:53:05 2014] ::1:53607 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:22:15 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 2 values for 4 columns' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6 /Us in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:22:15 2014] ::1:60093 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 2 values for 4 columns' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6 /Us in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:22:25 2014] ::1:60094 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:22:52 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such column: create_dt' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:22:52 2014] ::1:60218 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such column: create_dt' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:23:02 2014] ::1:60219 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:23:10 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such column: create_dt' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:23:10 2014] ::1:60277 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such column: create_dt' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:23:11 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such column: create_dt' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:23:11 2014] ::1:60278 [200]: /page/show/fuga/1/hoge/2 - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such column: create_dt' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(237): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(270): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6  in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:23:30 2014] ::1:60284 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:24:37 2014] PHP Fatal error:  Undefined class constant 'getTimestamp' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 93
+[Wed Mar  5 16:24:37 2014] ::1:60564 [200]: /page/show/fuga/1/hoge/2 - Undefined class constant 'getTimestamp' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 93
+[Wed Mar  5 16:24:47 2014] ::1:60565 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:32:19 2014] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 94
+[Wed Mar  5 16:32:19 2014] PHP Warning:  DateTime::createFromFormat(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 94
+[Wed Mar  5 16:32:19 2014] PHP Strict Standards:  Only variables should be passed by reference in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 94
+[Wed Mar  5 16:32:19 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 141
+[Wed Mar  5 16:32:19 2014] ::1:62327 [200]: /page/show/fuga/1/hoge/2
+[Wed Mar  5 16:32:33 2014] ::1:62328 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:39:46 2014] PHP Fatal error:  Undefined class constant 'getTimestamp' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 92
+[Wed Mar  5 16:39:46 2014] ::1:63911 [200]: /page/show - Undefined class constant 'getTimestamp' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 92
+[Wed Mar  5 16:40:00 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 141
+[Wed Mar  5 16:40:00 2014] ::1:63912 [200]: /page/show
+[Wed Mar  5 16:40:13 2014] ::1:63965 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:43:04 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such function: now' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(235): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(268): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(275): Application->run()
+#6 /Use in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:43:04 2014] ::1:64572 [200]: /page/show - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such function: now' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(235): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(268): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(275): Application->run()
+#6 /Use in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:43:05 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such function: now' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(235): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(268): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(275): Application->run()
+#6 /Use in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:43:05 2014] ::1:64573 [200]: /page/show - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such function: now' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(235): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(268): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(275): Application->run()
+#6 /Use in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:43:23 2014] ::1:64579 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:47:53 2014] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such function: now' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(236): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(269): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6 /Use in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:47:53 2014] ::1:49295 [200]: /page/show - Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1 no such function: now' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:86
+Stack trace:
+#0 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php(86): PDO->prepare('????INSERT INTO...')
+#1 /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(647): Doctrine\DBAL\Statement->__construct('????INSERT INTO...', Object(Doctrine\DBAL\Connection))
+#2 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(90): Doctrine\DBAL\Connection->prepare('????INSERT INTO...')
+#3 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(236): UserMapper::create(Object(User))
+#4 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(269): PageController->show(Array)
+#5 /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php(276): Application->run()
+#6 /Use in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php on line 91
+[Wed Mar  5 16:48:04 2014] ::1:49296 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:48:45 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 141
+[Wed Mar  5 16:48:45 2014] ::1:49464 [200]: /page/show
+[Wed Mar  5 16:49:04 2014] ::1:49465 Invalid request (Unexpected EOF)
+[Wed Mar  5 16:50:16 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 141
+[Wed Mar  5 16:50:16 2014] ::1:49759 [200]: /page/show
+[Wed Mar  5 16:50:18 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 141
+[Wed Mar  5 16:50:18 2014] ::1:49760 [200]: /page/show
+[Wed Mar  5 16:50:34 2014] ::1:49766 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:09:23 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php on line 141
+[Wed Mar  5 17:09:23 2014] ::1:54285 [200]: /page/show
+[Wed Mar  5 17:09:33 2014] ::1:54286 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:15:23 2014] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 92
+[Wed Mar  5 17:15:23 2014] ::1:55677 [200]: /page/show
+[Wed Mar  5 17:15:33 2014] ::1:55678 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:16:33 2014] ::1:55901 [200]: /page/show
+[Wed Mar  5 17:16:43 2014] ::1:55902 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:16:46 2014] ::1:55943 [200]: /page/show
+[Wed Mar  5 17:16:47 2014] ::1:55944 [200]: /page/show
+[Wed Mar  5 17:16:47 2014] ::1:55947 [200]: /page/show
+[Wed Mar  5 17:16:48 2014] ::1:55949 [200]: /page/show
+[Wed Mar  5 17:16:49 2014] ::1:55953 [200]: /page/show
+[Wed Mar  5 17:16:53 2014] ::1:55957 [200]: /page/show
+[Wed Mar  5 17:16:55 2014] ::1:55972 [200]: /page/show
+[Wed Mar  5 17:17:13 2014] ::1:55976 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:18:29 2014] ::1:56272 [200]: /page/show
+[Wed Mar  5 17:18:30 2014] ::1:56273 [200]: /page/show
+[Wed Mar  5 17:18:30 2014] ::1:56277 [200]: /page/show
+[Wed Mar  5 17:18:31 2014] ::1:56279 [200]: /page/show
+[Wed Mar  5 17:18:49 2014] ::1:56282 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:26:58 2014] ::1:58081 [200]: /page/show
+[Wed Mar  5 17:27:11 2014] ::1:58082 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:31:53 2014] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 32
+[Wed Mar  5 17:31:53 2014] ::1:59093 [200]: /page/show
+[Wed Mar  5 17:32:11 2014] ::1:59094 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:32:16 2014] ::1:59168 [200]: /page/show
+[Wed Mar  5 17:32:31 2014] ::1:59169 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:32:48 2014] ::1:59289 [200]: /page/show
+[Wed Mar  5 17:32:49 2014] ::1:59290 [200]: /page/show
+[Wed Mar  5 17:32:59 2014] ::1:59295 [200]: /page/show
+[Wed Mar  5 17:33:11 2014] ::1:59327 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:33:13 2014] PHP Fatal error:  Undefined constant 'r' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 32
+[Wed Mar  5 17:33:13 2014] ::1:59372 [200]: /page/show - Undefined constant 'r' in /Users/hagiharar/Documents/php/DI/trait-di-mvc/controller-sample.php on line 32
+[Wed Mar  5 17:33:29 2014] ::1:59373 [200]: /page/show
+[Wed Mar  5 17:33:38 2014] ::1:59428 [200]: /page/show
+[Wed Mar  5 17:33:51 2014] ::1:59458 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:33:59 2014] ::1:59530 [200]: /page/show
+[Wed Mar  5 17:34:11 2014] ::1:59531 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:35:55 2014] ::1:59962 [200]: /page/show
+[Wed Mar  5 17:36:05 2014] ::1:59993 [200]: /page/show
+[Wed Mar  5 17:38:35 2014] ::1:60510 [200]: /page/show
+[Wed Mar  5 17:38:52 2014] ::1:60511 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:39:03 2014] ::1:60606 [200]: /page/show
+[Wed Mar  5 17:39:22 2014] ::1:60607 Invalid request (Unexpected EOF)
+[Wed Mar  5 17:39:23 2014] ::1:60670 [200]: /page/show
+[Wed Mar  5 17:39:42 2014] ::1:60671 Invalid request (Unexpected EOF)
+[Wed Mar  5 18:37:13 2014] ::1:56503 [200]: /page/show
+[Wed Mar  5 18:37:28 2014] ::1:56504 Invalid request (Unexpected EOF)
+[Wed Mar  5 19:27:08 2014] ::1:50252 [200]: /page/show
+[Wed Mar  5 19:27:18 2014] ::1:50253 Invalid request (Unexpected EOF)
+[Thu Mar  6 19:02:03 2014] Failed to listen on localhost:8011 (reason: Address already in use)
+[Thu Mar  6 19:02:11 2014] ::1:58843 [200]: /page/show
+[Thu Mar  6 19:02:26 2014] ::1:58844 Invalid request (Unexpected EOF)
+[Thu Mar  6 19:02:31 2014] ::1:58926 [200]: /page/show
+[Thu Mar  6 19:02:32 2014] ::1:58927 [200]: /page/show
+[Thu Mar  6 19:02:46 2014] ::1:58936 Invalid request (Unexpected EOF)
+[Thu Mar  6 19:59:05 2014] Failed to listen on localhost:8011 (reason: Address already in use)
+[Thu Mar  6 19:59:17 2014] ::1:54384 [404]: /page/show - No such file or directory
+[Thu Mar  6 19:59:28 2014] ::1:54385 Invalid request (Unexpected EOF)
+[Thu Mar  6 20:01:24 2014] ::1:54776 [404]: /page/show - No such file or directory
+[Thu Mar  6 20:01:27 2014] ::1:54777 [404]: /page/show - No such file or directory
+[Thu Mar  6 20:01:33 2014] ::1:54787 [404]: / - No such file or directory
+[Thu Mar  6 20:01:39 2014] ::1:54810 [404]: /index.php - No such file or directory
+[Thu Mar  6 20:01:49 2014] ::1:54827 Invalid request (Unexpected EOF)
+[Thu Mar  6 20:01:55 2014] PHP Warning:  require(/Users/hagiharar/Documents/php/DI/vendor/autoload.php): failed to open stream: No such file or directory in /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php on line 6
+[Thu Mar  6 20:01:55 2014] PHP Fatal error:  require(): Failed opening required '/Users/hagiharar/Documents/php/DI/vendor/autoload.php' (include_path='.:/usr/local/Cellar/php55/5.5.9/lib/php') in /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php on line 6
+[Thu Mar  6 20:01:55 2014] ::1:54878 [200]: /index.php - require(): Failed opening required '/Users/hagiharar/Documents/php/DI/vendor/autoload.php' (include_path='.:/usr/local/Cellar/php55/5.5.9/lib/php') in /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php on line 6
+[Thu Mar  6 20:02:09 2014] ::1:54879 Invalid request (Unexpected EOF)
+[Thu Mar  6 20:31:35 2014] PHP Warning:  require(/Users/hagiharar/Documents/php/DI/vendor/autoload.php): failed to open stream: No such file or directory in /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php on line 6
+[Thu Mar  6 20:31:35 2014] PHP Fatal error:  require(): Failed opening required '/Users/hagiharar/Documents/php/DI/vendor/autoload.php' (include_path='.:/usr/local/Cellar/php55/5.5.9/lib/php') in /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php on line 6
+[Thu Mar  6 20:31:35 2014] ::1:60607 [200]: /index.php - require(): Failed opening required '/Users/hagiharar/Documents/php/DI/vendor/autoload.php' (include_path='.:/usr/local/Cellar/php55/5.5.9/lib/php') in /Users/hagiharar/Documents/php/DI/trait-di-mvc/index.php on line 6
+[Thu Mar  6 20:31:49 2014] ::1:60608 Invalid request (Unexpected EOF)
+[Thu Mar  6 20:32:59 2014] Failed to listen on localhost:8011 (reason: Address already in use)
+[Thu Mar  6 20:33:13 2014] Failed to listen on localhost:8011 (reason: Address already in use)

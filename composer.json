@@ -1,5 +1,17 @@
 {
-	    "require": {
-			        "doctrine/dbal": ">=2.3.0"
-						    }
+	"autoload": {
+		"psr-0": {
+			"_comment_namespace": "フレームワーク部分などnamespaceをクラスファイルに定義している場合に使える",
+			"_comment_nonamespace": "アプリケーション部分などnamespaceを定義していない場合にも使える",
+			"": "src/app",
+			"framework": "src"
+		},
+		"_comment_classmap": "いつでも使える。クラスのrequire文はautoload_classmap.phpに出力される"
+	},
+	"require": {
+		"doctrine/dbal": ">=2.3.0"
+	},
+	"require-dev": {
+		"filp/whoops": "1.*"
+	}
 }
