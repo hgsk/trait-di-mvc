@@ -9,7 +9,7 @@ trait ControllerInjector
 	 */
 	public function getController($name=null)
 	{
-		$classname = camelize($name) . 'Controller';
+		$classname = \camelize($name) . 'Controller';
 		return BaseInjector::prepare($name, new $classname);
 	}
 }
