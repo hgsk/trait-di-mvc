@@ -4,7 +4,8 @@
  * Register Controller
  */
 class RegisterController{
-	use \framework\ViewInjector;
+	use framework\BaseController;
+	use framework\ViewInjector;
 	protected $isPost;
 
 	public function index(){

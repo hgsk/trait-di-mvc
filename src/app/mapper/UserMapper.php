@@ -92,7 +92,7 @@ class UserMapper extends DataMapper{
 
 	/**
 	 * 指定したメールアドレスの行を返す
-	 * @param int $id;
+	 * @param string $email_address;
 	 * @return Model;
 	 **/
 	static public function findByEmailAddress($email_address){
@@ -101,10 +101,12 @@ class UserMapper extends DataMapper{
 			FROM user_tbl
 			WHERE email_address = :email_address
 		');
-		$statement->bindValue("email_address", $email_address, PDO::PARAM_INT);
+		$statement->bindValue("email_address", $email_address, PDO::PARAM_STR);
 		$statement->execute();
-
 		return self::decorate($statement)->fetch();
+
+		//$statement->setFetchMode(PDO::FETCH_CLASS,'User');
+		return $statement->fetch();
 	}
 	/**
 	 * すべての行を返す

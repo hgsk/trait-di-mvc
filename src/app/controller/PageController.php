@@ -7,13 +7,6 @@ class PageController {
 	use \framework\BaseController;
 	use \framework\ViewInjector;
 	public function show($params){
-		//Cookieをセット
-		setcookie("cookie","eaten");
-		//
-		//print_r($_COOKIE);
-		//print_r($_GET);
-		//print_r($_POST);
-
 		//新規ユーザーを登録
 		$user = new User();
 		$user->name = "Jane";
@@ -31,7 +24,7 @@ class PageController {
 		$user_ids = array_map(function ($user){return $user->id;},$users);
 
 		//すべてのユーザーを削除
-		UserMapper::destroy($user_ids);
+		//UserMapper::destroy($user_ids);
 
 		// Viewを出力
 		$this->getView('view/view.html')->set('users',$users)->set('foo','bar')->set('hoge','fuga')->render();

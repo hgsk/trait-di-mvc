@@ -49,3 +49,6 @@ TEMPLATE;
 function e($value){
 	throw new Exception($value);
 }
+function ev($value){
+	throw new Exception(v($value));
+}

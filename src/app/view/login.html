@@ -5,14 +5,13 @@
 	<title></title>
 </head>
 <body>
-<?php if( $registered==true ):?>
-<p>registered.</p>
-<?php else: ?>
-	<form method="post" action="/auth/login">
-		<input type="email" name="email_address" placeholder="mail address">
-		<input type="password" name="password" placeholder="password">
-		<input type="submit">
-	</form>
-<?php endif; ?>
+<p>
+<?= isset($message['flash']) ? $message['flash']: '' ?>
+</p>
+<form method="post" action="/auth/authenticate">
+	<input type="email" name="email_address" placeholder="mail address">
+	<input type="password" name="password" placeholder="password">
+	<input type="submit">
+</form>
 </body>
 </html>

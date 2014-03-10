@@ -3,9 +3,12 @@ namespace framework;
 /**
  * View
  */
+use Monolog\Logger;
+use Monolog\Handler\ConsoleLogHandler;
 class View {
 	public $variables = [];
 	public $content;
+	public $logger;
 
 	/**
 	 * テンプレートを呼び出す
@@ -14,6 +17,8 @@ class View {
 	 */
 	public function __construct($filename){
 		$this->filename = APPPATH .'app/' . $filename;
+		$this->logger = new Logger('view');
+		$this->logger->pushHandler(new ConsoleLogHandler(Logger::WARNING));
 		return true;
 	}
 
@@ -27,6 +32,9 @@ class View {
 		include $this->filename;
 		$this->content = ob_get_clean();
 		echo $this->content;
+		if(!empty($this->variables)){
+			$this->logger->addWarning(json_encode($this->variables));
+		}
 		//JsonVIEW
 		//header('Content-type: application/json');
 		//echo json_encode($this->variables, JSON_PRETTY_PRINT);
