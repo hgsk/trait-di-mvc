@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<?php if( $registered==true ):?>
+<p>registered.</p>
+<?php else: ?>
+	<form method="post" action="register">
+		<input type="text" name="username" placeholder="your name">
+		<input type="password" name="password" placeholder="password">
+		<input type="email" name="email_address" placeholder="mail address">
+		<input type="submit">
+	</form>
+<?php endif; ?>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
 	"autoload": {
 		"psr-0": {
-			"": "src/app",
+			"": ["src/app","src/app/controller","src/app/model","src/app/service","src/app/view","src/app/mapper"],
 			"framework": "src"
 		},
 		"files": ["src/framework/GlobalFunctions.php"]

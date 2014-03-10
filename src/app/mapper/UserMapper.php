@@ -24,12 +24,13 @@ class UserMapper extends DataMapper{
 	 **/
 	static public function create($model){
 		$statement = self::getConnection()->prepare('
-			INSERT INTO user_tbl(name, password, create_dt, update_dt)
-			VALUES (:name,:password, :create_dt, :update_dt) 
+			INSERT INTO user_tbl(name, password, email_address, create_dt, update_dt)
+			VALUES (:name,:password, :email_address, :create_dt, :update_dt) 
 		');
 		$dt = self::getDateTime();
 		$statement->bindParam("name", $model->name, PDO::PARAM_STR);
 		$statement->bindParam("password", $model->password, PDO::PARAM_STR);
+		$statement->bindParam("email_address", $model->email_address, PDO::PARAM_STR);
 		$statement->bindParam("create_dt", $dt, PDO::PARAM_STR);
 		$statement->bindParam("update_dt", $dt, PDO::PARAM_STR);
 		$statement->execute();
@@ -89,6 +90,22 @@ class UserMapper extends DataMapper{
 		return self::decorate($statement)->fetch();
 	}
 
+	/**
+	 * 指定したメールアドレスの行を返す
+	 * @param int $id;
+	 * @return Model;
+	 **/
+	static public function findByEmailAddress($email_address){
+		$statement = self::getConnection()->prepare('
+			SELECT *
+			FROM user_tbl
+			WHERE email_address = :email_address
+		');
+		$statement->bindValue("email_address", $email_address, PDO::PARAM_INT);
+		$statement->execute();
+
+		return self::decorate($statement)->fetch();
+	}
 	/**
 	 * すべての行を返す
 	 * @param int $id;

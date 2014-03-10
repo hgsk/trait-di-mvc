@@ -46,3 +46,6 @@ TEMPLATE;
 	echo $template;
 	
 }
+function e($value){
+	throw new Exception($value);
+}

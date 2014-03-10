@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0faf241e93fcce986cc306d0b7d48572",
+    "hash": "e23ff2d524e1c8323d5a6308a43fc2f2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -482,12 +482,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "0ac27c8089d0ec41728d96b5aa0dcad18fb0d459"
+                "reference": "dc75a998d83ebb285b94b1a6fd96644b457ed33c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/0ac27c8089d0ec41728d96b5aa0dcad18fb0d459",
-                "reference": "0ac27c8089d0ec41728d96b5aa0dcad18fb0d459",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc75a998d83ebb285b94b1a6fd96644b457ed33c",
+                "reference": "dc75a998d83ebb285b94b1a6fd96644b457ed33c",
                 "shasum": ""
             },
             "require": {
@@ -509,6 +509,7 @@
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
@@ -541,7 +542,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-02-26 12:30:17"
+            "time": "2014-03-09 20:51:48"
         },
         {
             "name": "psr/log",
@@ -584,40 +585,35 @@
     ],
     "packages-dev": [
         {
-            "name": "symfony/debug",
+            "name": "filp/whoops",
             "version": "dev-master",
-            "target-dir": "Symfony/Component/Debug",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Debug.git",
-                "reference": "8b0839bb30d40be5950a7162b16fe8150393e773"
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "e3d1ad7ff7b417cb98d6d860f7040ba5bb75cb0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/8b0839bb30d40be5950a7162b16fe8150393e773",
-                "reference": "8b0839bb30d40be5950a7162b16fe8150393e773",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/e3d1ad7ff7b417cb98d6d860f7040ba5bb75cb0d",
+                "reference": "e3d1ad7ff7b417cb98d6d860f7040ba5bb75cb0d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "symfony/http-foundation": "~2.1",
-                "symfony/http-kernel": "~2.1"
-            },
-            "suggest": {
-                "symfony/http-foundation": "",
-                "symfony/http-kernel": ""
+                "mockery/mockery": "0.9.*",
+                "php": ">=5.3.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Debug\\": ""
+                    "Whoops": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -626,19 +622,23 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
                 }
             ],
-            "description": "Symfony Debug Component",
-            "homepage": "http://symfony.com",
-            "time": "2014-03-03 12:53:01"
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2014-03-03 12:19:05"
         }
     ],
     "aliases": [
@@ -647,7 +647,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "monolog/monolog": 20,
-        "symfony/debug": 20
+        "filp/whoops": 20
     },
     "platform": [
 

@@ -9,6 +9,7 @@ class User{
 	public $id;
 	public $name;
 	public $password;
+	public $email_address;
 	public $create_dt;
 	public $update_dt;
 }

@@ -4,6 +4,7 @@
  * Page Controller
  */
 class PageController {
+	use \framework\BaseController;
 	use \framework\ViewInjector;
 	public function show($params){
 		//Cookieをセット
@@ -33,7 +34,7 @@ class PageController {
 		UserMapper::destroy($user_ids);
 
 		// Viewを出力
-		$this->getView('view.html')->set('users',$users)->set('foo','bar')->set('hoge','fuga')->render();
+		$this->getView('view/view.html')->set('users',$users)->set('foo','bar')->set('hoge','fuga')->render();
 		//$view = $this->getView('view.html');
 		//$view->set('users',$users);
 		//$view->set('foo','bar');
