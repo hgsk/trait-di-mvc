@@ -12,6 +12,11 @@
 		"respect/validation": "dev-master"
 	},
 	"require-dev": {
-		"filp/whoops": "1.1.*@dev"
+		"filp/whoops": "1.1.*@dev",
+		"techlivezheng/phpctags": "dev-develop",
+		"phpspec/phpspec": "2.0.*@dev"
+	},
+	"config": {
+		"bin-dir": "bin"
 	}
 }
