@@ -5,9 +5,11 @@
 	<title></title>
 </head>
 <body>
+<?php foreach($message['flash'] as $flash): ?>
 <p>
-<?= isset($message['flash']) ? $message['flash']: '' ?>
+	<?= isset($flash) ? implode($flash) : '' ?>
 </p>
+<?php endforeach; ?>
 <form method="post" action="/auth/authenticate">
 	<input type="email" name="email_address" placeholder="mail address">
 	<input type="password" name="password" placeholder="password">

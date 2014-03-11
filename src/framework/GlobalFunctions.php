@@ -1,8 +1,7 @@
 <?php
 ////////Debug Utility////////
 function v($variable){
-	var_dump($variable);
-	return true;
+	return var_dump($variable);
 }
 function camelize($str){
 	return str_replace(' ','',ucwords(str_replace('_',' ',$str)));
@@ -10,7 +9,6 @@ function camelize($str){
 
 
 
-// TODO MonologにConsoleLogHandlerとして登録できるようにする
 function c($dump, $label = null, $trace = false, $trace_options = []){
 	if(!is_array($dump)){
 		$dump = [$dump];
@@ -47,8 +45,5 @@ TEMPLATE;
 	
 }
 function e($value){
-	throw new Exception($value);
-}
-function ev($value){
-	throw new Exception(v($value));
+	throw new Exception(var_export($value,true));
 }

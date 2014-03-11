@@ -5,14 +5,19 @@ use \Whoops\Handler\PrettyPageHandler;
 use Monolog\Logger;
 use Monolog\Handler\ConsoleLogHandler;
 use Monolog\Handler\StreamHandler;
+
+// TODO: Modelにうつしたい
+use Respect\Validation\Validator as Validator;
 trait BaseController{
 	protected $handler;
 	protected $logger;
+	protected $validator;
 	public function __construct(){
 		// session
 		session_start();
 		// Error
 		$this->handler = new PrettyPageHandler;
+		//$this->handler->addDataTableCallback('included_files',get_included_files);
 		$this->whoops = new Run;
 		$this->whoops->pushHandler($this->handler);
 		$this->whoops->register();
@@ -22,6 +27,10 @@ trait BaseController{
 		$this->logger->pushHandler(new ConsoleLogHandler(Logger::WARNING));
 		$this->logger->pushHandler(new StreamHandler(SYSPATH . "/log/monolog.log", Logger::WARNING));
 
+		// TODO: Modelにうつしたい
+		// Form Validators
+		$this->validator = Validator::create();
+		
 		//session write close
 		session_register_shutdown();
 	}

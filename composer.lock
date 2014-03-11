@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e23ff2d524e1c8323d5a6308a43fc2f2",
+    "hash": "f88dc4759f2e8e23e5e539b1aa374716",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -581,6 +581,54 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "respect/validation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Respect/Validation.git",
+                "reference": "979c06997b6027a4780712e29999dffd53f7878f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/979c06997b6027a4780712e29999dffd53f7878f",
+                "reference": "979c06997b6027a4780712e29999dffd53f7878f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "symfony/validator": ">=2.1.0",
+                "zendframework/zend-validator": "2.*"
+            },
+            "suggest": {
+                "ext-bcmath": "*",
+                "ext-mbstring": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Respect\\Validation": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD Style"
+            ],
+            "authors": [
+                {
+                    "name": "Respect/Validation Contributors",
+                    "homepage": "https://github.com/Respect/Validation/graphs/contributors"
+                }
+            ],
+            "description": "The most awesome validation engine ever created for PHP",
+            "homepage": "http://respect.li",
+            "keywords": [
+                "respect",
+                "validation",
+                "validator"
+            ],
+            "time": "2014-02-20 02:20:33"
         }
     ],
     "packages-dev": [
@@ -647,6 +695,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "monolog/monolog": 20,
+        "respect/validation": 20,
         "filp/whoops": 20
     },
     "platform": [
