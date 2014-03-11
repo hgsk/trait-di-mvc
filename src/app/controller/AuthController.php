@@ -15,16 +15,24 @@ class AuthController {
 
 	function authenticate(){
 		$_SESSION['signed_in'] = [];
-		$user = UserMapper::findByEmailAddress($_POST['email_address']);
-		if(password_verify($_POST['password'],$user->password)){
-			$_SESSION['signed_in'] = true;
-			$_SESSION['username'] = $user->name;
-			header('Location: ' . $_SESSION['redirect']);
+		if(empty(trim($_POST['email_address']))){
+			$_SESSION['flash'] = 'Enter Mail Address';
+		}elseif(empty(trim($_POST['password']))){
+			$_SESSION['flash'] = 'Enter Password';
 		}else{
-			$_SESSION['flash'] = 'Invalid username or password';
-			$_SESSION['signed_in'] = false;
-			$_SESSION['username'] = null;
-			header('Location: /auth/login');
+			$user = UserMapper::findByEmailAddress($_POST['email_address']);
+			if(!empty($user)){
+				if(password_verify($_POST['password'],$user->password)){
+					$_SESSION['signed_in'] = true;
+					$_SESSION['username'] = $user->name;
+					header('Location: ' . $_SESSION['redirect']);
+				}else{
+				$_SESSION['flash'] = 'Invalid username or password';
+				$_SESSION['signed_in'] = false;
+				$_SESSION['username'] = null;
+				}
+			}
 		}
+		header('Location: /auth/login');
 	}
 }
