@@ -1,10 +1,18 @@
 <?php
 /**
  * Application
+ * ルーティングを行うクラス
  */
 class Application {
+
+	/** @type string '/'で呼び出されるコントローラ**/
 	const ROOT_CONTROLLER_NAME = 'Welcome';
+
 	use \framework\ControllerInjector;
+	/**
+	 * ルーティングを開始します
+	 * @return void
+	 */
 	public function run(){
 		// /Controller/Action/param1/value1/param2/value2/...
 		$requestURI = explode('/', $_SERVER['REQUEST_URI']);

@@ -1,11 +1,16 @@
 <?php
 // TODO 抽象クラス BaseControllerに共通処理と、個別処理のインターフェースを書く
 /**
- * Page Controller
+ * ページを表示するコントローラ サンプル
  */
 class PageController {
 	use \framework\BaseController;
 	use \framework\ViewInjector;
+
+	/**
+	 * ページを表示
+	 * @return void
+	 **/
 	public function show($params){
 		//新規ユーザーを登録
 		$user = new User();

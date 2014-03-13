@@ -1,6 +1,6 @@
 <?php
 /**
- * User DataMapper
+ * Userデータアクセスレイヤ
  */
 // TODO 永続化機構をBaseDataMapperクラスに実装する
 // TODO 複数のDataMapperにまたがるトランザクションを実装できるようにする -> Contextに実装？
@@ -12,6 +12,8 @@
 use Doctrine\DBAL\Connection;
 use framework\DataMapper;
 class UserMapper extends DataMapper{
+
+	/* @type string データアクセスモデル名 */
 	const MODEL_CLASS = 'User';
 
 	// PDO/DBALに依存している。(SQL直書きなので)

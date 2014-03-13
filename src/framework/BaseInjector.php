@@ -1,8 +1,12 @@
 <?php
 namespace framework;
+/*
+ * インジェクター基底トレイト
+ */
 trait BaseInjector
 {
 	/**
+	 * インスタンスをDIコンテナに格納する準備をする
 	 * @param string $name
 	 * @param object $instance
 	 * @return object

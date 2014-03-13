@@ -1,19 +1,22 @@
 <?php
 namespace framework;
 /**
- * Container (DI)
+ * DI コンテナ
+ * 各種インスタンスを格納する
  * 
  * PHP Version 5.5
  * 
  * @author     hgsk
  * @license    http://www.opensource.org/licenses/mit-license.php MIT
  *
- */
+ **/
 class Container
 {
+	/* @type array インスタンス登録場所 */
 	public static $container = [];
 
 	/**
+	 * インスタンスの登録状況を調べる
 	 * @param string $keyName
 	 * @return bool
 	 */
@@ -26,6 +29,7 @@ class Container
 	}
 
 	/**
+	 * インスタンスを登録する
 	 * @param string $keyName
 	 * @param trait $container
 	 */
@@ -35,6 +39,7 @@ class Container
 	}
 
 	/**
+	 * インスタンスを取り出す
 	 * @param string $keyName
 	 */
 	public static function get($keyName){

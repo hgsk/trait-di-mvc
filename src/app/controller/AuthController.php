@@ -1,19 +1,38 @@
 <?php
+/**
+ * 認証を行うコントローラ
+ **/
 class AuthController {
 	use framework\BaseController;
 	use framework\ViewInjector;
 
+	/**
+	 * ログイン
+	 * @return void
+	 **/
 	function login()
 	{
+		if(!session_id()){
+			session_start();
+		}
 		$this->getView('view/login.html')->set('message',$_SESSION)->render();
-		$_SESSION['flash'] = [];
 	}
 
+	/**
+	 * ログアウト
+	 * @return void
+	 **/
 	function logout(){
-		session_destroy();
+		if(session_id()){
+			session_destroy();
+		}
 		$this->getView('view/logout.html')->render();
 	}
 
+	/**
+	 * 認証
+	 * @return void
+	 **/
 	function authenticate(){
 		$_SESSION['signed_in'] = [];
 
@@ -34,7 +53,7 @@ class AuthController {
 		}
 		header('Location: /auth/login');
 	}
-	function validate($form){
+	protected function validate($form){
 		// TODO: Modelにうつしたい
 		/*pseudo
 		$form = $this->getValidator(new DTO);

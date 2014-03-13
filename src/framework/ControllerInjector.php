@@ -1,9 +1,13 @@
 <?php
 
 namespace framework;
+/*
+ * コントローラインジェクタ
+ */
 trait ControllerInjector
 {
 	/**
+	 * コントローラインスタンスを取り出す
 	 * @param string $name
 	 * @return Controller
 	 */

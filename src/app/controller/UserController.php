@@ -1,11 +1,14 @@
 <?php
 // TODO 抽象クラス BaseControllerに共通処理と、個別処理のインターフェースを書く
 /**
- * Page Controller
+ * ユーザー管理
  */
 class UserController{
 	use framework\BaseController;
 	use framework\ViewInjector;
+	/*
+	 * 全てのユーザーリスト
+	 */
 	public function all($params){
 		if(self::isAuthorized()){
 			//すべてのユーザーを取得

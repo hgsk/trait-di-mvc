@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Login</title>
 </head>
 <body>
-<?php foreach($message['flash'] as $flash): ?>
+<?php foreach($message['flash'] as $row): ?>
 <p>
-	<?= isset($flash) ? implode($flash) : '' ?>
+	<?= isset($row) ? implode($row) : '' ?>
 </p>
 <?php endforeach; ?>
-<form method="post" action="/auth/authenticate">
+<form name="authenticate" method="post" action="/auth/authenticate">
 	<input type="email" name="email_address" placeholder="mail address">
 	<input type="password" name="password" placeholder="password">
 	<input type="submit">

@@ -1,17 +1,23 @@
 <?php
 // TODO 抽象クラス BaseControllerに共通処理と、個別処理のインターフェースを書く
 /**
- * Register Controller
+ * ユーザー登録
  */
 class RegisterController{
 	use framework\BaseController;
 	use framework\ViewInjector;
 	protected $isPost;
 
+	/**
+	 * ユーザー登録フォーム
+	 **/
 	public function index(){
 		$this->getView('view/register.html')->render();
 	}
 
+	/**
+	 * ユーザー登録
+	 **/
 	public function register(){
 		if(strtoupper($_SERVER['REQUEST_METHOD']) === 'POST'){
 			$this->isPost = true;
